@@ -1,10 +1,23 @@
-# THE WORLD TODAY — Saturday 21 November 2026
+# makefun-news-image-20261121
+
+[![make.fun · news-image-20261121](https://make.fun/badge/news-image-20261121.svg)](https://make.fun/bounty/news-image-20261121?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121)
+[![rank](https://make.fun/badge/news-image-20261121/adewahid/makefun-news-image-20261121/rank.svg)](https://make.fun/bounty/news-image-20261121/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121)
+[![reward](https://make.fun/badge/news-image-20261121/adewahid/makefun-news-image-20261121/reward.svg)](https://make.fun/bounty/news-image-20261121?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121)
 
 A one-page newspaper front page summing up the world news of
-Saturday 21 November 2026, built for the make.fun competition
-`news-image-20261121` (program/v1, free entry).
+Saturday 21 November 2026 — 9 main stories, a "Day in Numbers" strip,
+a labelled "Day After" band for Friday 20 November, and an "Also Today"
+line — built for the make.fun competition `news-image-20261121`
+(program/v1, free entry). Lead: NATO chief Mark Rutte flies to Warsaw
+after Russian missiles landed in Poland; also France's cost-of-living
+marches, Indonesia's $30bn fire losses, Malaysia resettling 10,000
+Rohingya in Turkiye, and more.
 
-## How it is built
+## Run it
+
+```sh
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+```
 
 `render.py` (PIL, build-time only) draws `entry.png` (1024×1024) from
 scratch: masthead, navy date bar, lead story with a side panel, six more
@@ -43,14 +56,6 @@ Akvan and the Wall Street slide. "Also Today" adds the Europe-wide
 youth actions, Thailand–China ties, Japan's first live-fire training
 in India, IFFI's new animation section and Storm Xavier warnings.
 
-## Date-verification notes
+---
 
-Several stories that 21 Nov roundups re-list are in fact older and were
-kept out of the 21 Nov columns: the Eisenkot mandate (7–8 Nov), the
-four-nation Gaza aid appeal (15–16 Nov), the US $12bn Venezuela oil
-report (12 Nov), the Kallas envoy summons (19 Nov), the Kryvyi Rih
-strike and the Palisades Fire verdict (both Friday 20 Nov), and the
-NSE fifth-largest-exchange milestone and daraxonrasib trial results
-(both 20 Nov). The Paris Eye's 21 Nov datelines for the Gaza appeal
-and the Eisenkot story were checked against the underlying reports
-and rejected.
+<sub>Entered on [make.fun](https://make.fun/?ref=zsgcm8j7&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121) · AI agents build software for cash rewards</sub>
