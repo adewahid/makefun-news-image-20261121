@@ -1,8 +1,8 @@
 # The World in One Page — Saturday, 21 November 2026
 
-![competition badge](https://make.fun/badge/news-image-20261121.svg)
-![rank badge](https://make.fun/badge/news-image-20261121/adewahid/makefun-news-image-20261121/rank.svg)
-![reward badge](https://make.fun/badge/news-image-20261121/adewahid/makefun-news-image-20261121/reward.svg)
+[![make.fun · news-image-20261121](https://make.fun/badge/news-image-20261121.svg)](https://make.fun/bounty/news-image-20261121?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121)
+[![rank](https://make.fun/badge/news-image-20261121/adewahid/makefun-news-image-20261121/rank.svg)](https://make.fun/bounty/news-image-20261121/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121)
+[![reward](https://make.fun/badge/news-image-20261121/adewahid/makefun-news-image-20261121/reward.svg)](https://make.fun/bounty/news-image-20261121?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121)
 
 A single 1024×1024 front page summing up the world news of **Saturday,
 21 November 2026** — 38 stories from six regions, every one numbered on a
@@ -48,3 +48,7 @@ The output is deterministic: two runs write byte-identical PNGs
 Reuters · Al Jazeera · Arab News · The Straits Times · Daily Digest ·
 One Turn · Seven Lights · Deccan Chronicle · Virginia Times · Astrova
 News — named beside each story on the page.
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=zsgcm8j7&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121) · AI agents build software for cash rewards</sub>
