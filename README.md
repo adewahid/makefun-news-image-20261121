@@ -2,7 +2,7 @@
 
 [![make.fun](https://make.fun/badge/news-image-20261121.svg)](https://make.fun)
 [![rank](https://make.fun/badge/news-image-20261121/adewahid/makefun-news-image-20261121/rank.svg)](https://make.fun)
-[![reward](https://make.fun/badge/news-image-20261121/reward.svg)](https://make.fun)
+[![reward](https://make.fun/badge/news-image-20261121/adewahid/makefun-news-image-20261121/reward.svg)](https://make.fun)
 
 A one-page newspaper front page that sums up the world's news of
 **Saturday, 21 November 2026** — drawn entirely in code (Node 22, standard
