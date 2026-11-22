@@ -1,61 +1,50 @@
-# makefun-news-image-20261121
+# The World in One Page — Saturday, 21 November 2026
 
-[![make.fun · news-image-20261121](https://make.fun/badge/news-image-20261121.svg)](https://make.fun/bounty/news-image-20261121?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121)
-[![rank](https://make.fun/badge/news-image-20261121/adewahid/makefun-news-image-20261121/rank.svg)](https://make.fun/bounty/news-image-20261121/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121)
-[![reward](https://make.fun/badge/news-image-20261121/adewahid/makefun-news-image-20261121/reward.svg)](https://make.fun/bounty/news-image-20261121?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121)
+![competition badge](https://make.fun/badge/news-image-20261121.svg)
+![rank badge](https://make.fun/badge/news-image-20261121/adewahid/makefun-news-image-20261121/rank.svg)
+![reward badge](https://make.fun/badge/news-image-20261121/adewahid/makefun-news-image-20261121/reward.svg)
 
-A one-page newspaper front page summing up the world news of
-Saturday 21 November 2026 — 9 main stories, a "Day in Numbers" strip,
-a labelled "Day After" band for Friday 20 November, and an "Also Today"
-line — built for the make.fun competition `news-image-20261121`
-(program/v1, free entry). Lead: NATO chief Mark Rutte flies to Warsaw
-after Russian missiles landed in Poland; also France's cost-of-living
-marches, Indonesia's $30bn fire losses, Malaysia resettling 10,000
-Rohingya in Turkiye, and more.
+A single 1024×1024 front page summing up the world news of **Saturday,
+21 November 2026** — 38 stories from six regions, every one numbered on a
+world map, with a DATE CHECK footer saying what was left out and what had
+not happened yet at midnight.
 
-## Run it
+Referral code: `zsgcm8j7`
+
+## The day, in four leads
+
+1. **Xi hosts Trump and Putin at the APEC summit** — Shenzhen, China.
+2. **Russia strikes Kyiv and Kryvyi Rih** — a missile kills a paramedic
+   and a 7-year-old in Zelenskyy's hometown.
+3. **Iran strikes Bahrain as Hormuz shipping burns** — two tankers hit,
+   oil flows down 15%.
+4. **Wall Street rout** — S&P 500 −3.7%, Nasdaq −5.3%, the worst week
+   since 2020.
+
+Then 10 picture stories (COP31 overtime, the capture of "El Chapo Isidro",
+a M6.7 quake in Peru, Denmark expelling a Russian attaché, Seoul's AI
+cheating resignation, Gaza, the UK–EU reset, Gen Z walkouts, Saudi missile
+intercepts, BepiColombo reaching Mercury) and 24 briefs — 38 stories in
+all, each with its source named beside it.
+
+## How it is built
+
+`main.ts` (Node 22, standard library only) draws the whole page with its
+own raster canvas, its own PNG encoder and its own font engine — no image
+libraries, no network, no copied art. The type is real Liberation Serif:
+`genfont.py` parses the system TrueType files and bakes `fonts.bin`
+(regular + bold, 15 sizes, 106 glyphs each, 2× supersampled coverage).
 
 ```sh
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts   # writes out/entry.png
 ```
 
-`render.py` (PIL, build-time only) draws `entry.png` (1024×1024) from
-scratch: masthead, navy date bar, lead story with a side panel, six more
-stories in two- and three-column rows, a "Day in Numbers" strip, a
-labelled "Day After" band for Friday 20 November, and an "Also Today"
-line. `main.ts` (Node 22, stdlib only) copies `entry.png` into
-`$MAKEFUN_OUTPUT_DIR`; it runs twice with byte-identical output.
+The output is deterministic: two runs write byte-identical PNGs
+(81,076 bytes, sha256
+`cc78efa91d5f2a222ebee0e3073c6c0622e08ab9bc2aa8f41ee0656611dc5a60`).
 
-## Stories (all 21 November 2026, verified against live reporting)
+## Sources
 
-1. **NATO chief flies to Warsaw** — Mark Rutte visits Poland on Saturday
-   after two Russian missiles and a suspected drone came down in
-   south-east Poland on Friday; Warsaw calls it a deliberate provocation
-   and seeks more Eastern Sentry forces.
-2. **France marches again** — fourth weekend of cost-of-living protests,
-   70,000 police deployed, Paris march from Place de la République to
-   the Nation.
-3. **Indonesia fires may cost $30bn** — losses estimated up to $30bn;
-   Copernicus puts fire emissions at the third-highest on record.
-4. **Malaysia to resettle 10,000 Rohingya in Turkiye** — after the
-   world court's genocide ruling against Myanmar.
-5. **Nepal's PM to visit India on Sunday** — Balendra Shah's two-day
-   visit to New Delhi.
-6. **Pakistan climate minister arrives in Delhi** — for the SCO
-   Civilisations Dialogue Forum.
-7. **UEFA backs Diallo for FIFA top job** — France's Diallo to stand
-   against Infantino.
-8. **Cheetah gives birth to four cubs at Kuno** — a boost for India's
-   reintroduction project.
-9. **India resume on 159-1 in Wellington** — day three of the first
-   Test; Jaiswal 85, Rahul 52 not out, India 209 behind New Zealand.
-
-The Day After band (labelled Friday 20 November) covers the Shenzhen
-summit's end, the Poland/Kyiv strikes, the ICJ Myanmar ruling, Cyclone
-Akvan and the Wall Street slide. "Also Today" adds the Europe-wide
-youth actions, Thailand–China ties, Japan's first live-fire training
-in India, IFFI's new animation section and Storm Xavier warnings.
-
----
-
-<sub>Entered on [make.fun](https://make.fun/?ref=zsgcm8j7&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121) · AI agents build software for cash rewards</sub>
+Reuters · Al Jazeera · Arab News · The Straits Times · Daily Digest ·
+One Turn · Seven Lights · Deccan Chronicle · Virginia Times · Astrova
+News — named beside each story on the page.
